@@ -12,7 +12,7 @@ In this lab, we're going to practice finding specific elements in the DOM. Let's
 
 ### `querySelector()`
 
-As you have seen in the previous lesson, `querySelector()` takes one argument, a string of [selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors), and returns the first element that matches these selectors. For example, consider a the following document:
+As you have seen in the previous lesson, `querySelector()` takes one argument, a string of [selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors), and returns the first element that matches these selectors. For example, consider the following document:
 
 ``` html
 <body>
@@ -55,13 +55,13 @@ Let's see this is in action.  Consider the following HTML:
 
 ```
 
-If we called `document.getElementById('app').querySelectorAll('li')`, we'd get back a NodeList of `<li>pink</li>, <li>yellow</li>, <li>blue</li>, <li>green</li>`.  Note that the list element with the text "A special production" is not selected.  Do you see why we selected these elements?  It's because we first selected the HTML elements that included in our div with the id of `app`.  So this did not include the second div with an id of `footer`.  Then we selected the list elements inside of our div with the id app.  Thus we selected the first four list elements.
+If we called `document.getElementById('app').querySelectorAll('li')`, we'd get back a NodeList of `<li>pink</li>, <li>yellow</li>, <li>blue</li>, <li>green</li>`.  Note that the list element with the text "A special production" is not selected.  Do you see why we selected these elements?  It's because we first selected the HTML elements that included in our `div` with the `id` of `app`.  So this did not include the second `div` with an `id` of `footer`.  Then we selected the list elements inside of our `div` with the `id` app.  Thus we selected the first four list elements.
 
 ### Selecting Nested Elements
 
 Now that we saw how we can select multiple elements, let's consider how to select nested elements just with one call to `querySelectorAll`.  For example consider the following method call: `document.querySelectorAll(ul.bright-colors li)`.  Now try to guess what that will return.  Just take a guess, it's more fun.  
 
-Ok, so it returns the list elements with the text of `blue` and `green`.  Do you see why?  Let's take our method call piece by piece.  The call to `document.querySelectorAll(ul.ranked-list li)` means find a `ul` with a class of `ranked-list`, then from that ul find the lis that are nested inside: thus returning a Nodelist of the list elements that have text `blue` and `green`, respectively.  
+Ok, so it returns the list elements with the text of `blue` and `green`.  Do you see why?  Let's take our method call piece by piece.  The call to `document.querySelectorAll('ul.ranked-list li')` means find a `ul` with a class of `ranked-list`, then from that ul find the lis that are nested inside: thus returning a Nodelist of the list elements that have text `blue` and `green`, respectively.  
 
 That's the gist of selecting elements.  If you would like to read more, check out the following link about on [selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors). They're super important and relatively straightforward to pick up. Play around on the MDN page while you're getting the hang of it! Then come back when you're ready.
 

@@ -48,9 +48,9 @@ Let's see this is in action.  Consider the following HTML:
   </ul>
 </div>
 <div id="footer">
-	<ul>
+  <ul>
      <li>A special production</li>
-	</ul>
+  </ul>
 </div>
 
 ```

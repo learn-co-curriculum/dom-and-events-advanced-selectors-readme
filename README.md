@@ -18,7 +18,7 @@ As you have seen in the previous lesson, `querySelector()` takes one argument, a
 document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
-> You can navigate to the page either by [clicking here](https://en.wikipedia.org/wiki/Ada_Lovelace) or opening the `index.html` file provided in  your browser that is provided in this lab.
+> You can navigate to the page either by [clicking here](https://en.wikipedia.org/wiki/Ada_Lovelace) or opening the `lovelace.html` file provided in  your browser that is provided in this lab.
 
 ### Selecting Multiple Elements
 
@@ -29,7 +29,7 @@ Let's see this is in action.  For example, let's say that we would like to get a
 ```js
 	let subheadings = document.querySelectorAll('h2')
 	// [h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2]
-	
+
 	subheadings.constructor
 	// ƒ NodeList() { [native code] }
 ```
@@ -40,10 +40,10 @@ As you can see this selects all of the `h2` elements on the page and returns the
 let subheadings = document.querySelectorAll('h2')
 // [h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2]
 Array.from(subheadings).map((heading) => heading.innerText)
-// ["Contents", "Biography[edit]", "Work[edit]", "In popular culture[edit]", 
-"Commemoration[edit]", "Titles and styles by which she was known[edit]", 
-"Ancestry[edit]", "Bicentenary[edit]", "Publications[edit]", "See also[edit]", 
-"Notes[edit]", "References[edit]", "Sources[edit]", "External links[edit]", 
+// ["Contents", "Biography[edit]", "Work[edit]", "In popular culture[edit]",
+"Commemoration[edit]", "Titles and styles by which she was known[edit]",
+"Ancestry[edit]", "Bicentenary[edit]", "Publications[edit]", "See also[edit]",
+"Notes[edit]", "References[edit]", "Sources[edit]", "External links[edit]",
 "Navigation menu"]
 ```
 
@@ -58,9 +58,9 @@ We can make sure that we only select elements from the box, by first selecting t
 let tableOfContents = document.querySelector('.toc')
 let subheadings = tableOfContents.querySelectorAll('li')
 
-// [li.toclevel-1.tocsection-1, li.toclevel-2.tocsection-2, 
-li.toclevel-2.tocsection-3, li.toclevel-2.tocsection-4, 
-li.toclevel-2.tocsection-5, li.toclevel-1.tocsection-6, 
+// [li.toclevel-1.tocsection-1, li.toclevel-2.tocsection-2,
+li.toclevel-2.tocsection-3, li.toclevel-2.tocsection-4,
+li.toclevel-2.tocsection-5, li.toclevel-1.tocsection-6,
 ...]
 ```
 
@@ -70,9 +70,9 @@ Ok, done and done.  Do you see why we selected these elements?  It's because we 
 let subheadings = document.querySelector('.toc').
 	tableOfContents.querySelectorAll('li')
 
-// [li.toclevel-1.tocsection-1, li.toclevel-2.tocsection-2, 
-li.toclevel-2.tocsection-3, li.toclevel-2.tocsection-4, 
-li.toclevel-2.tocsection-5, li.toclevel-1.tocsection-6, 
+// [li.toclevel-1.tocsection-1, li.toclevel-2.tocsection-2,
+li.toclevel-2.tocsection-3, li.toclevel-2.tocsection-4,
+li.toclevel-2.tocsection-5, li.toclevel-1.tocsection-6,
 ...]
 ```
 
